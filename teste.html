@@ -1,0 +1,128 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Page with Green Banner
+  </title>
+  <div class="bg-green-500 p-6 flex>
+   <div>
+    <img alt="Company logo with a placeholder image of 50x50 pixels" class="h-12 w-12 mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/5B32VsifE8zqIy0lxmGDVYsp4N6sgKwZBTF3SIzbS0eBHn7TA.jpg" width="50"/>
+    <h1 class="text-white text-2xl font-bold">
+     Company Title
+    </h1>
+   </div>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-roboto">
+  
+  </div>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .login-container .input-group {
+            margin-bottom: 15px;
+        }
+        .login-container .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-container .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container .input-group input:focus {
+            border-color: #007bff;
+        }
+        .login-container .input-group .error {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="input-group">
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login">
+            <div class="error" id="login-error">Login é obrigatório.</div>
+        </div>
+        <div class="input-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password">
+            <div class="error" id="password-error">Senha é obrigatória.</div>
+        </div>
+		
+        <button onclick="validateForm()">Entrar</button>
+		 <a href="EsqueciSenha.html" onclick="forgotPassword()">Esqueci minha senha</a>
+    </div>
+
+    <script>
+        function validateForm() {
+            var login = document.getElementById('login').value;
+            var password = document.getElementById('password').value;
+            var loginError = document.getElementById('login-error');
+            var passwordError = document.getElementById('password-error');
+            var isValid = true;
+
+            if (login === "") {
+                loginError.style.display = 'block';
+                isValid = false;
+            } else {
+                loginError.style.display = 'none';
+            }
+
+            if (password === "") {
+                passwordError.style.display = 'block';
+                isValid = false;
+            } else {
+                passwordError.style.display = 'none';
+            }
+
+            if (isValid) {
+                window.location.href = "Listadeprodutos.html";;
+            }
+        }
+    </script>
+</body>
+ </body>
+</html>
